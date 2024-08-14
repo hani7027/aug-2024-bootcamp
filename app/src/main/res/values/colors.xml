@@ -2,4 +2,19 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#13A89E</color>
+    <color name="input_text">#424242</color>
+    <color name="input_error_color">#F3726B</color>
+    <color name="title_text">#1C2D40</color>
+    <color name="list_title_text">#4E4949</color>
+    <color name="list_sub_title_text">#4E4949</color>
+    <color name="whiteBackgroundAlpha70">#B3F7F7FA</color>
+    <color name="card_bg">#F8F8F8</color>
+    <color name="card_border">#0000001A</color>
+    <color name="toolbar_title">#1C2D40</color>
+    <color name="devider_darker_gray">#D2D2D2</color>
+    <color name="dialog_title">#262626</color>
+    <color name="dialog_divider">#ECECEC</color>
+    <color name="btn_cancel">#3E39FF</color>
 </resources>

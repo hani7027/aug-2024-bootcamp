@@ -11,16 +11,27 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import com.battermind.aug2024bootcamp.databinding.ActivityMainBinding
+import com.battermind.aug2024bootcamp.databinding.DummyFileBinding
+import com.google.android.material.appbar.AppBarLayout
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        val dummyBinding: DummyFileBinding? = null
+
+
+
+        dummyBinding?.textview
+
+
+
+
+
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)

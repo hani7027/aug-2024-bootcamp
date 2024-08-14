@@ -1,3 +1,42 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textSize6XS">12sp</dimen>
+    <dimen name="textSize5XS">13sp</dimen>
+    <dimen name="textSize4XS">14sp</dimen>
+    <dimen name="textSize3XS">15sp</dimen>
+    <dimen name="textSizeXXS">16sp</dimen>
+    <dimen name="textSizeS">17sp</dimen>
+    <dimen name="textSizeL">18sp</dimen>
+    <dimen name="textSizeXL">20sp</dimen>
+    <dimen name="textSizeXXL">22sp</dimen>
+    <dimen name="textSize3XL">24sp</dimen>
+    <dimen name="textSize4XL">28sp</dimen>
+    <dimen name="textSize5XL">32sp</dimen>
+    <dimen name="textSize6XL">36sp</dimen>
+    <dimen name="textSize7XL">60sp</dimen>
+
+    <!--Space-->
+    <dimen name="spaceXXXS">2dp</dimen>
+    <dimen name="spaceXXS">4dp</dimen>
+    <dimen name="spaceXS">8dp</dimen>
+    <dimen name="spaceS">16dp</dimen>
+    <dimen name="spaceM">24dp</dimen>
+    <dimen name="spaceL">32dp</dimen>
+    <dimen name="spaceXL">40dp</dimen>
+    <dimen name="spaceXXL">48dp</dimen>
+    <dimen name="spaceH">80dp</dimen>
+
+
+    <dimen name="cornerRadiusXS">4dp</dimen>
+    <dimen name="cornerRadiusS">8dp</dimen>
+    <dimen name="cornerRadiusM">12dp</dimen>
+    <dimen name="cornerRadiusXL">16dp</dimen>
+    <dimen name="cornerRadius2L">24dp</dimen>
+    <dimen name="cornerRadius3L">30dp</dimen>
+
+    <!--BUTTON-->
+    <dimen name="buttonHeight">68dp</dimen>
+
+    <dimen name="login_page_logo_height">110dp</dimen>
+    <dimen name="splash_page_logo_height">142dp</dimen>
 </resources>
