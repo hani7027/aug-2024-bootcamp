@@ -12,28 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aug2024Bootcamp"
         tools:targetApi="31">
+
         <activity
-            android:name=".binding.BindingActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Aug2024Bootcamp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-
-
-
-        <activity
-            android:name=".lifecycle.ActivityLifeCycle"
-            android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Aug2024Bootcamp">
-
         </activity>
     </application>
 

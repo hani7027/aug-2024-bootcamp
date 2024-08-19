@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/SecondFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -25,17 +25,12 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-        <action
-            android:id="@+id/action_SecondFragment_to_life_cycle_fragment"
-            app:destination="@id/life_cycle_fragment" />
+
     </fragment>
     <fragment
-        android:id="@+id/life_cycle_fragment"
-        android:name="com.battermind.aug2024bootcamp.lifecycle.LifeCycleFragment" />
-    <fragment
-        android:id="@+id/bindingFragment"
-        android:name="com.battermind.aug2024bootcamp.binding.BindingFragment"
-        android:label="fragment_binding"
-        tools:layout="@layout/fragment_binding" />
+        android:id="@+id/splashScreenFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.splashscreen.SplashScreenFragment"
+        android:label="SplashScreenFragment" />
+
 
 </navigation>

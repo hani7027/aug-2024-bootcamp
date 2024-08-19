@@ -1,4 +1,4 @@
-package com.battermind.aug2024bootcamp
+package com.battermind.aug2024bootcamp.ui.splashscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.battermind.aug2024bootcamp.databinding.FragmentFirstBinding
+import com.battermind.aug2024bootcamp.databinding.FragmentSplashScreenBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class FirstFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+class SplashScreenFragment : Fragment() {
+
+    private var _binding: FragmentSplashScreenBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,7 +22,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
         return binding.root
 
     }
