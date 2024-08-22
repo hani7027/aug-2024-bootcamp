@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="@dimen/login_page_logo_height"
-            android:src="@android:drawable/gallery_thumb" />
+            android:src="@drawable/app_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usernameTextInputLayout"

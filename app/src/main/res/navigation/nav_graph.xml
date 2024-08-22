@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashScreenFragment">
+    app:startDestination="@id/exampleListFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.battermind.aug2024bootcamp.example.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:label="FirstFragment"
         tools:layout="@layout/fragment_first">
 
         <action
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.battermind.aug2024bootcamp.example.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label="SecondFragment"
         tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -28,14 +28,23 @@
 
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_splash_screen"
         android:id="@+id/splashScreenFragment"
         android:name="com.battermind.aug2024bootcamp.ui.splashscreen.SplashScreenFragment"
-        android:label="SplashScreenFragment" >
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
         <action
             android:id="@+id/action_splashScreenFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/log_in_screen" />
+    <fragment
+        android:id="@+id/exampleListFragment"
+        android:name="com.battermind.aug2024bootcamp.example.exampleList.ExampleListFragment"
+        android:label="ExampleListFragment" />
 
 
 </navigation>
