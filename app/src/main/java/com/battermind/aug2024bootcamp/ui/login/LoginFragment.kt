@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.battermind.aug2024bootcamp.databinding.LogInScreenBinding
+import com.battermind.aug2024bootcamp.utils.Router
 
 class LoginFragment : Fragment() {
 
     private var _binding: LogInScreenBinding? = null
 
     private val binding get() = _binding!!
-
+    private val router by lazy { Router(findNavController()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,10 +28,11 @@ class LoginFragment : Fragment() {
 
     }
 
-    data class Person(val id: Int)
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.icBack.setOnClickListener {
+            router.navigateBack()
+        }
         binding.loginButton.setOnClickListener {
             if (validate()) {
                 Toast.makeText(
@@ -37,6 +40,7 @@ class LoginFragment : Fragment() {
                     "Valid",
                     Toast.LENGTH_LONG
                 ).show()
+                router.gotoAdminDashboard()
             } else {
                 Toast.makeText(
                     requireContext(),
@@ -54,8 +58,8 @@ class LoginFragment : Fragment() {
     private fun validate(): Boolean {
         val email = binding.usernameEditText.text?.toString()
         val password = binding.passwordEditText.text?.toString()
-        val isValidEmail = email?.equals(ADMIN_EMAIL)?:false
-        val isValidPassword = password?.equals(ADMIN_PASSWORD)?:false
+        val isValidEmail = email?.equals(ADMIN_EMAIL) ?: false
+        val isValidPassword = password?.equals(ADMIN_PASSWORD) ?: false
         return isValidEmail && isValidPassword
 
     }

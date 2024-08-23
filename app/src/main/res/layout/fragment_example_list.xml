@@ -9,7 +9,8 @@
         android:id="@+id/rvProgramList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/spaceM"
+        android:layout_margin="@dimen/spaceS"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_example_list" />
 

@@ -41,4 +41,5 @@
     <dimen name="login_page_logo_height">110dp</dimen>
     <dimen name="splash_page_logo_height">142dp</dimen>
     <dimen name="toolBarHeight">78dp</dimen>
+    <dimen name="crad_corner">5dp</dimen>
 </resources>

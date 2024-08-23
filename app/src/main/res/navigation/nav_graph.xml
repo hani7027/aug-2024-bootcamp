@@ -3,44 +3,111 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/exampleListFragment">
+    app:startDestination="@id/splashScreenFragment">
 
-    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.battermind.aug2024bootcamp.example.FirstFragment"
-        android:label="FirstFragment"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:popUpTo="@id/FirstFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.battermind.aug2024bootcamp.example.SecondFragment"
-        android:label="SecondFragment"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-
-    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.battermind.aug2024bootcamp.ui.splashscreen.SplashScreenFragment"
         android:label="SplashScreenFragment"
-        tools:layout="@layout/fragment_splash_screen">
-        <action
-            android:id="@+id/action_splashScreenFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_splash_screen"></fragment>
+    <fragment
+        android:id="@+id/userDashboardFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.userDashboard.UserDashboardFragment"
+        android:label="UserDashboardFragment"
+        tools:layout="@layout/user_dashboard_fragment"/>
+    <action
+        android:id="@+id/action_global_to_userDashboardFragment"
+        app:destination="@id/userDashboardFragment"
+        app:popUpTo="@id/splashScreenFragment"
+        app:popUpToInclusive="true" />
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.battermind.aug2024bootcamp.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/log_in_screen" />
+    <action
+        android:id="@+id/action_global_to_loginFragment"
+        app:destination="@id/loginFragment" />
+    <fragment
+        android:id="@+id/inquiryFormFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.inquiry.InquiryFormFragment"
+        android:label="InquiryFormFragment"
+        tools:layout="@layout/fragment_inquiry_form"/>
+    <action
+        android:id="@+id/action_global_to_inquiryFormFragment"
+        app:destination="@id/inquiryFormFragment" />
+    <fragment
+        android:id="@+id/inquiryListFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.inquiry.InquiryListFragment"
+        android:label="InquiryFormFragment"
+        tools:layout="@layout/fragment_inquiry_list"/>
+    <action
+        android:id="@+id/action_global_to_inquiryListFragment"
+        app:destination="@id/inquiryListFragment" />
+    <fragment
+        android:id="@+id/inquiryDetailsFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.inquiry.InquiryDetailsFragment"
+        android:label="InquiryDetailsFragment"
+        tools:layout="@layout/fragment_inquiry_detail"/>
+    <action
+        android:id="@+id/action_global_to_inquiryDetailsFragment"
+        app:destination="@id/inquiryDetailsFragment" />
+    <fragment
+        android:id="@+id/programList"
+        android:name="com.battermind.aug2024bootcamp.ui.program.ProgramListFragment"
+        android:label="ProgramList"
+        tools:layout="@layout/fragment_program_list"/>
+    <action
+        android:id="@+id/action_global_to_programList"
+        app:destination="@id/programList" />
+    <fragment
+        android:id="@+id/programDetailFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.program.ProgramDetailFragment"
+        android:label="ProgramDetailFragment"
+        tools:layout="@layout/fragment_program_detail"/>
+    <action
+        android:id="@+id/action_global_to_programDetailFragment"
+        app:destination="@id/programDetailFragment" />
+    <fragment
+        android:id="@+id/addNewProgramFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.program.AddNewProgramFragment"
+        android:label="AddNewProgramFragment"
+        tools:layout="@layout/fragment_program_add"/>
+    <action
+        android:id="@+id/action_global_to_addNewProgramFragment"
+        app:destination="@id/addNewProgramFragment" />
+    <fragment
+        android:id="@+id/contactUs"
+        android:name="com.battermind.aug2024bootcamp.ui.contactUs.ContactUsFragment"
+        android:label="ContactUs"
+        tools:layout="@layout/fragment_contact_us"/>
+    <action
+        android:id="@+id/action_global_to_contactUs"
+        app:destination="@id/contactUs" />
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="com.battermind.aug2024bootcamp.ui.adminDashboard.AdminDashboardFragment"
+        android:label="ContactUs"
+        tools:layout="@layout/fragment_admin_dashboard"/>
+    <action
+        android:id="@+id/action_global_to_adminDashboard"
+        app:destination="@id/adminDashboard"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+
+    <!--example screen-->
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.battermind.aug2024bootcamp.example.FirstFragment"
+        android:label="FirstFragment"
+        tools:layout="@layout/fragment_first" />
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.battermind.aug2024bootcamp.example.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_second" />
+
     <fragment
         android:id="@+id/exampleListFragment"
         android:name="com.battermind.aug2024bootcamp.example.exampleList.ExampleListFragment"

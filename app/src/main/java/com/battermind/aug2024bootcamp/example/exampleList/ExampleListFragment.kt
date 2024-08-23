@@ -1,6 +1,7 @@
 package com.battermind.aug2024bootcamp.example.exampleList
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,8 +17,8 @@ class ExampleListFragment : Fragment() {
     private val viewModel: ExampleViewModel by viewModels()
     private val binding get() = _binding!!
 
-    private val list: MutableList<ExampleModel> = mutableListOf()
-    private val adapter: ExampleListAdapter by lazy { ExampleListAdapter() }
+    private var list: MutableList<ExampleModel> = mutableListOf()
+    private val adapter: ExampleListAdapter by lazy { ExampleListAdapter(::call) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +32,11 @@ class ExampleListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        val adapter = ExampleListAdapter(::call)
         binding.rvProgramList.adapter = adapter
-        adapter.submitList(getDummyList15())
+        list = dummyData100().toMutableList()
+        adapter.submitList(list)
     }
 
     override fun onDestroyView() {
@@ -40,10 +44,17 @@ class ExampleListFragment : Fragment() {
         _binding = null
     }
 
+    private fun call(exampleModel: ExampleModel) {
+        Log.e("call", "title: " + exampleModel.title)
+        binding.rvProgramList.adapter = adapter
+        list.remove(exampleModel)
+        adapter.submitList(list)
+    }
+
     private fun setViewModelData() {
         // Observe the LiveData list
         viewModel.exampleList.observe(viewLifecycleOwner, Observer { list ->
-            adapter.submitList(list)
+//            adapter.submitList(list)
         })
 
     }

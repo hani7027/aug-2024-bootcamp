@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">BatterMind Labs</string>
 
+    <!-- Havisha Jaitley -->
+    <string name="title_user_dashboard">User Dashboard</string>
+    <string name="title_inquiry_form">Inquiry Now</string>
+
+    <!-- Ridhi Gutta -->
+    <string name="title_ongoing_program_list">Ongoing Program List</string>
+    <string name="title_ongoing_program_details">Ongoing Program Details</string>
+
+    <!-- Ayisha Asharaf -->
+    <string name="title_contact_us">Contact Us</string>
+    <string name="title_admin_login">Admin Login</string>
+
+    <!-- Lasya Priya -->
+    <string name="title_admin_dashboard">Admin Dashboard</string>
+    <string name="title_all_inquiry_list">All Inquiry List</string>
+
+    <!-- Manvika K -->
+    <string name="title_inquiry_details">Inquiry Details</string>
+    <string name="title_add_new_program">Add New Program Details</string>
+
+
     <string name="button_login">Login</string>
     <string name="hint_password">password</string>
     <string name="hint_username">Email</string>
@@ -8,4 +29,10 @@
     <string name="hint_phone_number">Phone number</string>
     <string name="hint_email">Email</string>
     <string name="hint_interested">Why are you interested in participating in this 4 week App Development program?\n*</string>
+    <string name="ongoing_programs">Ongoing Programs</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="admin">Admin</string>
+    <string name="manage_programs">Manage Programs</string>
+    <string name="manage_inquiries">Manage Inquiries</string>
 </resources>
