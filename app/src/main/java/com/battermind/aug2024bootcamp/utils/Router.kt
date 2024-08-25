@@ -8,6 +8,13 @@ class Router(private val navController: NavController) {
         navController.navigateUp()
         navController.navigate(R.id.action_global_to_userDashboardFragment)
     }
+    fun gotoFirstFragment() {
+        navController.navigateUp()
+        navController.navigate(R.id.action_global_to_firstFragment)
+    }
+    fun gotoSecondFragment() {
+        navController.navigate(R.id.action_global_to_secondFragment)
+    }
 
     fun gotoProgramList() {
         navController.navigate(R.id.action_global_to_programList)

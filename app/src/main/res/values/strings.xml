@@ -35,4 +35,5 @@
     <string name="admin">Admin</string>
     <string name="manage_programs">Manage Programs</string>
     <string name="manage_inquiries">Manage Inquiries</string>
+    <string name="increase_count">Count</string>
 </resources>

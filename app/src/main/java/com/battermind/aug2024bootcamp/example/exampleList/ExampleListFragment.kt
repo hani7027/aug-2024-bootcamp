@@ -32,8 +32,6 @@ class ExampleListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        val adapter = ExampleListAdapter(::call)
         binding.rvProgramList.adapter = adapter
         list = dummyData100().toMutableList()
         adapter.submitList(list)

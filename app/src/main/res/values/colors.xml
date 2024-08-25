@@ -9,6 +9,9 @@
     <color name="logo_sky">#61B4F8</color>
     <color name="logo_green">#567325</color>
     <color name="light">#FEF5ED</color>
+    <color name="light_gray">#F3EFEF</color>
+    <color name="eating_color">#FEF5ED</color>
+    <color name="rating_color">#F19A53</color>
 
 
     <color name="input_text">#424242</color>

@@ -102,16 +102,22 @@
         android:name="com.battermind.aug2024bootcamp.example.FirstFragment"
         android:label="FirstFragment"
         tools:layout="@layout/fragment_first" />
+    <action
+        android:id="@+id/action_global_to_firstFragment"
+        app:destination="@id/FirstFragment" />
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.battermind.aug2024bootcamp.example.SecondFragment"
         android:label="SecondFragment"
         tools:layout="@layout/fragment_second" />
-
+    <action
+        android:id="@+id/action_global_to_secondFragment"
+        app:destination="@id/SecondFragment" />
     <fragment
         android:id="@+id/exampleListFragment"
         android:name="com.battermind.aug2024bootcamp.example.exampleList.ExampleListFragment"
-        android:label="ExampleListFragment" />
+        android:label="ExampleListFragment"
+        tools:layout="@layout/item_example_list"/>
 
 
 </navigation>
