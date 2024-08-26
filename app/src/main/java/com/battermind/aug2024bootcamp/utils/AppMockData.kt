@@ -1,11 +1,6 @@
-package com.battermind.aug2024bootcamp.model
+package com.battermind.aug2024bootcamp.utils
 
-data class ProgramModel(
-    val id: Long,
-    val title: String,
-    val duration: String,
-    val description: String
-)
+import com.battermind.aug2024bootcamp.database.model.ProgramModel
 
 fun getProgramData() = listOf(
 

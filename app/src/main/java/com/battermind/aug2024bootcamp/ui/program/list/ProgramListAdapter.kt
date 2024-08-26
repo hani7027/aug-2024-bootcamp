@@ -1,4 +1,4 @@
-package com.battermind.aug2024bootcamp.ui.program.adapter
+package com.battermind.aug2024bootcamp.ui.program.list
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.battermind.aug2024bootcamp.database.model.ProgramModel
 import com.battermind.aug2024bootcamp.databinding.ItemProgramBinding
-import com.battermind.aug2024bootcamp.model.ProgramModel
 
 class ProgramListAdapter(private val call: (programModel: ProgramModel) -> Unit) :
     ListAdapter<ProgramModel, ProgramListAdapter.ProgramViewHolder>(ProgramDiffUtils()) {

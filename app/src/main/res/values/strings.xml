@@ -20,6 +20,7 @@
     <!-- Manvika K -->
     <string name="title_inquiry_details">Inquiry Details</string>
     <string name="title_add_new_program">Add New Program Details</string>
+    <string name="title_add_now">Add Now</string>
 
 
     <string name="button_login">Login</string>
@@ -36,4 +37,9 @@
     <string name="manage_programs">Manage Programs</string>
     <string name="manage_inquiries">Manage Inquiries</string>
     <string name="increase_count">Count</string>
+
+
+    <string name="program_title_label">Title</string>
+    <string name="program_duration_label">Duration</string>
+    <string name="program_description_label">Description</string>
 </resources>

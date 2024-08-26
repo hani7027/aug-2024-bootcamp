@@ -55,7 +55,7 @@
         app:destination="@id/inquiryDetailsFragment" />
     <fragment
         android:id="@+id/programList"
-        android:name="com.battermind.aug2024bootcamp.ui.program.ProgramListFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.program.list.ProgramListFragment"
         android:label="ProgramList"
         tools:layout="@layout/fragment_program_list"/>
     <action
@@ -63,7 +63,7 @@
         app:destination="@id/programList" />
     <fragment
         android:id="@+id/programDetailFragment"
-        android:name="com.battermind.aug2024bootcamp.ui.program.ProgramDetailFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.program.detail.ProgramDetailFragment"
         android:label="ProgramDetailFragment"
         tools:layout="@layout/fragment_program_detail"/>
     <action
@@ -71,7 +71,7 @@
         app:destination="@id/programDetailFragment" />
     <fragment
         android:id="@+id/addNewProgramFragment"
-        android:name="com.battermind.aug2024bootcamp.ui.program.AddNewProgramFragment"
+        android:name="com.battermind.aug2024bootcamp.ui.program.form.AddNewProgramFragment"
         android:label="AddNewProgramFragment"
         tools:layout="@layout/fragment_program_add"/>
     <action
