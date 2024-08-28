@@ -25,8 +25,6 @@ class ProgramListFragment : Fragment() {
     private val router: Router by lazy { Router(findNavController()) }
 
     private var database: BetterMindDatabase? = null
-
-    private val adapter: ProgramListAdapter by lazy { ProgramListAdapter(::programItemTap) }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
@@ -45,18 +43,18 @@ class ProgramListFragment : Fragment() {
         binding.icAdd.setOnClickListener {
             router.gotoAddNewProgram()
         }
-
         CoroutineScope(Dispatchers.IO).launch {
             val programsDao = database?.programDao()
             programsDao?.insert()
             var data = programsDao?.getAll()
 
             withContext(Dispatchers.Main) {
-                adapter.submitList(data)
+                val adapter = ProgramAdapter(data ?: emptyList(),::programItemTap )
+                binding.rvProgramList.adapter = adapter
+
             }
         }
 
-        binding.rvProgramList.adapter = adapter
 
     }
 

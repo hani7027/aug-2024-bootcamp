@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.battermind.aug2024bootcamp.R
 import com.battermind.aug2024bootcamp.database.model.ProgramModel
 
-class ProgramAdapter(private val programs: List<ProgramModel>) :
+class ProgramAdapter(private val programs: List<ProgramModel>,private val call:(item:ProgramModel)->Unit) :
     RecyclerView.Adapter<ProgramAdapter.ProgramViewHolder>() {
     class ProgramViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val programName: TextView = view.findViewById(R.id.txtTitle)
