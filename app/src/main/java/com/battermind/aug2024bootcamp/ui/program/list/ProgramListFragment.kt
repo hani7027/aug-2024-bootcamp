@@ -64,6 +64,6 @@ class ProgramListFragment : Fragment() {
     }
 
     private fun programItemTap(programModel: ProgramModel) {
-
+router.gotoProgramDetail()
     }
 }
