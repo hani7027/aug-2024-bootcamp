@@ -9,7 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.battermind.aug2024bootcamp.databinding.FragmentFirstBinding
 import com.battermind.aug2024bootcamp.databinding.FragmentSplashScreenBinding
 import com.battermind.aug2024bootcamp.databinding.FragmentUserDashboardBinding
+import com.battermind.aug2024bootcamp.utils.IS_USER_LOGIN
 import com.battermind.aug2024bootcamp.utils.Router
+import com.battermind.aug2024bootcamp.utils.SharedPreferencesUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -45,6 +47,7 @@ class UserDashboardFragment : Fragment() {
 
     private fun initView() {
         binding.icLogin.setOnClickListener {
+            SharedPreferencesUtil.putBoolean(requireContext(), IS_USER_LOGIN, false)
             router.gotoAdminLogin()
         }
         binding.technologyPrograms.setOnClickListener {

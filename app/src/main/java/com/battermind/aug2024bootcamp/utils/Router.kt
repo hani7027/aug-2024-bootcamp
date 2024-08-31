@@ -44,11 +44,6 @@ class Router(private val navController: NavController) {
         navController.navigate(R.id.action_global_to_inquiryDetailsFragment)
     }
 
-
-
-
-
-
     fun gotoContactUs() {
         navController.navigate(R.id.action_global_to_contactUs)
     }

@@ -10,7 +10,10 @@ import com.battermind.aug2024bootcamp.database.BetterMindDatabase
 import com.battermind.aug2024bootcamp.database.BetterMindDatabase.AppDataBase.getDataBase
 import com.battermind.aug2024bootcamp.database.model.ProgramModel
 import com.battermind.aug2024bootcamp.databinding.FragmentProgramListBinding
+import com.battermind.aug2024bootcamp.utils.PROGRAM_DESCRIPTION
+import com.battermind.aug2024bootcamp.utils.PROGRAM_TITLE
 import com.battermind.aug2024bootcamp.utils.Router
+import com.battermind.aug2024bootcamp.utils.SharedPreferencesUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,12 +23,9 @@ import kotlinx.coroutines.withContext
 class ProgramListFragment : Fragment() {
 
     private var _binding: FragmentProgramListBinding? = null
-
     private val binding get() = _binding!!
     private val router: Router by lazy { Router(findNavController()) }
-
     private var database: BetterMindDatabase? = null
-
     private val adapter: ProgramListAdapter by lazy { ProgramListAdapter(::programItemTap) }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -66,6 +66,12 @@ class ProgramListFragment : Fragment() {
     }
 
     private fun programItemTap(programModel: ProgramModel) {
-
+        SharedPreferencesUtil.putString(requireContext(), PROGRAM_TITLE, programModel.title)
+        SharedPreferencesUtil.putString(
+            requireContext(),
+            PROGRAM_DESCRIPTION,
+            programModel.description
+        )
+        router.gotoProgramDetail()
     }
 }

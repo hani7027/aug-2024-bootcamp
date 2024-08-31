@@ -8,7 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.battermind.aug2024bootcamp.databinding.LogInScreenBinding
+import com.battermind.aug2024bootcamp.utils.IS_USER_LOGIN
 import com.battermind.aug2024bootcamp.utils.Router
+import com.battermind.aug2024bootcamp.utils.SharedPreferencesUtil
 
 class LoginFragment : Fragment() {
 
@@ -40,7 +42,9 @@ class LoginFragment : Fragment() {
                     "Valid",
                     Toast.LENGTH_LONG
                 ).show()
+                SharedPreferencesUtil.putBoolean(requireContext(), IS_USER_LOGIN,true)
                 router.gotoAdminDashboard()
+
             } else {
                 Toast.makeText(
                     requireContext(),

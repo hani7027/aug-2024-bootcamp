@@ -7,13 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.battermind.aug2024bootcamp.databinding.FragmentProgramDetailBinding
+import com.battermind.aug2024bootcamp.utils.PROGRAM_TITLE
 import com.battermind.aug2024bootcamp.utils.Router
+import com.battermind.aug2024bootcamp.utils.SharedPreferencesUtil
 
 
 class ProgramDetailFragment : Fragment() {
 
     private var _binding: FragmentProgramDetailBinding? = null
-
     private val binding get() = _binding!!
     private val router: Router by lazy { Router(findNavController()) }
 
@@ -33,6 +34,9 @@ class ProgramDetailFragment : Fragment() {
         binding.icBack.setOnClickListener {
             router.navigateBack()
         }
+
+        val title = SharedPreferencesUtil.getString(requireContext(), PROGRAM_TITLE)
+        binding.title.text = title
     }
 
     override fun onDestroyView() {
